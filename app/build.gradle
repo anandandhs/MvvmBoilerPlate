@@ -1,0 +1,83 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
+}
+
+android {
+    compileSdkVersion AppConfig.compileSdk
+    buildToolsVersion AppConfig.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.tcs.mvvmboilerplate"
+        minSdkVersion AppConfig.minSdk
+        targetSdkVersion AppConfig.targetSdk
+        versionCode AppConfig.versionCode
+        versionName AppConfig.versionName
+
+        testInstrumentationRunner AppConfig.androidTestInstrumentation
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    flavorDimensions(AppConfig.dimension)
+    productFlavors {
+        create("staging") {
+            applicationIdSuffix = ".staging"
+            setDimension(AppConfig.dimension)
+        }
+
+        create("production") {
+            setDimension(AppConfig.dimension)
+        }
+    }
+
+    viewBinding {
+        android.buildFeatures.viewBinding = true
+    }
+
+    compileOptions{
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
+    kotlinOptions{
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    //app libs
+    implementation(AppDependencies.appLibraries)
+
+    //external libs
+    implementation(AppDependencies.externalLibraries)
+
+    //annotation processor
+    kapt(AppDependencies.annotationProcessors)
+
+
+    //test libs
+    testImplementation(AppDependencies.testLibraries)
+    androidTestImplementation(AppDependencies.androidTestLibraries)
+
+}
+
+

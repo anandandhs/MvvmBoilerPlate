@@ -1,0 +1,2 @@
+rootProject.name = "MVVM Boilerplate"
+include ':app'

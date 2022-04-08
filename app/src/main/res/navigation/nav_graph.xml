@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.tcs.mvvmboilerplate.ui.component.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+     <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tcs.mvvmboilerplate.ui.component.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.tcs.mvvmboilerplate.ui.component.feed.FeedFragment"
+        android:label="FeedFragment" >
+        <action
+            android:id="@+id/action_feedFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.tcs.mvvmboilerplate.ui.component.detail.DetailFragment"
+        android:label="DetailFragment" />
+</navigation>

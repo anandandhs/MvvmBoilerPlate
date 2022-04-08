@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/My_Project/MVVMBoilerplate/app/src/main/res/layout/fragment_detail.xml" value="0.2682291666666667" />
+        <entry key="..\:/My_Project/MVVMBoilerplate/app/src/main/res/layout/fragment_feed.xml" value="0.1171875" />
+        <entry key="..\:/My_Project/MVVMBoilerplate/app/src/main/res/layout/fragment_login.xml" value="0.30885416666666665" />
+        <entry key="..\:/My_Project/MVVMBoilerplate/app/src/main/res/layout/recyclerview_row_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/My_Project/MVVMBoilerplate/app/src/main/res/layout/row_upnp_device.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
